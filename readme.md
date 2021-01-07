@@ -6,10 +6,6 @@ Prepared by **Praveen**
 
 ---
 
-[TOC]
-
----
-
 ## 1. Pre-requists:
 
 Make sure the following:
@@ -92,7 +88,7 @@ cp $tdir/*.asa.* $PBS_O_WORKDIR
 
 ```
 
-(Click here you download this code)[job-orca.sh]
+[Click here you download this code](job-orca.sh)
 
 **Sample G09 bash script**
 
@@ -122,7 +118,7 @@ export GAUSS_LFLAGS="-nodefile /tmp/.nodes.$PBS_JOBID"
 /home/app/gaussian/g09/g09 < input-file.inp > output-file.log
 ```
 
-(Click here you download this code)[input.sh]
+[Click here you download this code](input.sh)
 
 ## 3. Running your file:
 
@@ -133,3 +129,8 @@ export GAUSS_LFLAGS="-nodefile /tmp/.nodes.$PBS_JOBID"
 * To run a G09 job, enter `qsub input.sh`
 
 * To know the running status: `qstat -u username`
+
+## 4. Copying and input and output files to the local machine
+
+* In mac and linux use `sftp` to transfer files between server and local machine. In windows PuTTY can be useful.
+* In GNOME Linux desktops, you can directly access the files from nautilus itself. Click other locations and in the bottom address bar enter like `sftp://username@serverID` and enter password when prompted. 
